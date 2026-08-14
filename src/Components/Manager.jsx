@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -145,8 +144,8 @@ const Manager = ({ bgColor }) => {
                                         borderBottom: '2px solid #06b6d4',
                                     }}>
                                         <th style={{ padding: 'clamp(12px, 2vw, 16px)', textAlign: 'left', fontWeight: '600', color: '#0c4a6e' }}>Name</th>
-                                        <th style={{ padding: 'clamp(12px, 2vw, 16px)', textAlign: 'left', fontWeight: '600', color: '#0c4a6e', display: window.innerWidth < 768 ? 'none' : 'table-cell' }}>Description</th>
-                                        <th style={{ padding: 'clamp(12px, 2vw, 16px)', textAlign: 'left', fontWeight: '600', color: '#0c4a6e', display: window.innerWidth < 768 ? 'none' : 'table-cell' }}>Date</th>
+                                        <th style={{ padding: 'clamp(12px, 2vw, 16px)', textAlign: 'left', fontWeight: '600', color: '#0c4a6e' }}>Description</th>
+                                        <th style={{ padding: 'clamp(12px, 2vw, 16px)', textAlign: 'left', fontWeight: '600', color: '#0c4a6e',}}>Date</th>
                                         <th style={{ padding: 'clamp(12px, 2vw, 16px)', textAlign: 'left', fontWeight: '600', color: '#0c4a6e' }}>Amount</th>
                                         <th style={{ padding: 'clamp(12px, 2vw, 16px)', textAlign: 'center', fontWeight: '600', color: '#0c4a6e' }}>Actions</th>
                                     </tr>
@@ -166,8 +165,8 @@ const Manager = ({ bgColor }) => {
                                                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f8fafc'}
                                                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
                                                 <td style={{ padding: 'clamp(12px, 2vw, 16px)', fontWeight: '500', color: '#1e293b' }}>{item.name}</td>
-                                                <td style={{ padding: 'clamp(12px, 2vw, 16px)', color: '#64748b', display: window.innerWidth < 768 ? 'none' : 'table-cell' }}>{item.note}</td>
-                                                <td style={{ padding: 'clamp(12px, 2vw, 16px)', color: '#64748b', display: window.innerWidth < 768 ? 'none' : 'table-cell' }}>{formattedDate}</td>
+                                                <td style={{ padding: 'clamp(12px, 2vw, 16px)', color: '#64748b',}}>{item.note}</td>
+                                                <td style={{ padding: 'clamp(12px, 2vw, 16px)', color: '#64748b',}}>{formattedDate}</td>
                                                 <td style={{ padding: 'clamp(12px, 2vw, 16px)', textAlign: 'left', fontWeight: '600', color: '#059669' }}>Rs. {item.amount}</td>
                                                 <td style={{ padding: 'clamp(12px, 2vw, 16px)', textAlign: 'center' }}>
 
